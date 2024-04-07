@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu percentual de gordura</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body background="academia.jpg">
+    <div id="total">
+        <div class="container">
+            <div class="titulos">
+                <h1><span style='font-size:50px;'>&#128170; </span> </h1>
+                <h1>Calculador de Percentual de Gordura Corporal e calorias</h1>
+                <h1>  </h1>
+                <h2 class="Nome_Criador">Vinicius Floriano</h2>
+            </div>
+            <div class="grupo">
+                <label>Sexo:</label>
+                <select id="sexo" onchange="toggleDiv()">
+                    <option value="Homem">Homem</option>
+                    <option value="Mulher">Mulher</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label>Altura(cm): </label>
+                <input type="number" id="altura" value="0" />
+                <div class="aviso">
+                    <span>Se você tem 1,85 metros de altura, você deve preencher 185 no campo, pois a altura no campo é em centímetros.</span>
+                </div>
+            </div>
+            <div class="grupo" id="homemdiv">
+                <div class="grupo">
+                    <label>Circunferência do pescoço(cm): </label>
+                    <input type="number" id="circunferencia_pescoco" value="0" />
+                </div>
+
+                <div class="grupo">
+                    <label>Circunferência da cintura(cm): </label>
+                    <input type="number" id="circunferencia_cintura" value="0" />
+                </div>
+            </div>
+
+            <div class="grupo" id="mulherdiv">
+                <label>Espessura da dobra cutânea abdominal(cm): </label>
+                <input type="number" id="abs" value="0" />
+
+
+                <div class="grupo">
+                    <label>Espessura da dobra cutânea tricipital(cm): </label>
+                    <input type="number" id="tricips" value="0" />
+                </div>
+
+                <div class="grupo">
+                    <label>Espessura da dobra cutânea suprailíaca(cm): </label>
+                    <input type="number" id="suprailiaca" value="0" />
+                </div>
+
+                <div class="grupo">
+                    <label>Espessura da dobra cutânea da Coxa(cm): </label>
+                    <input type="number" id="coxa" value="0" />
+                </div>
+            </div>
+
+            <div class="grupo">
+                <label>Peso(kg): </label>
+                <input type="number" id="peso" value="0" />
+            </div>
+
+            <div class="grupo">
+                <label>Qual sua idade? </label>
+                <input type="number" id="idade" value="0" />
+            </div>
+
+            <div class="grupo">
+                <label>Qual seu objetivo?</label>
+                <select id="objetivo">
+                    <option>Ganhar Massa Muscular</option>
+                    <option>Perda de Gordura</option>
+                </select>
+            </div>
+
+            <div>
+                 <button class="calcular" onclick="calcular()">Calcular</button>
+            </div>
+            <section>
+                <div class="resultados">
+                    <h1 class="resultados">Seus Resultados: </h1>
+
+                    <p class="resultados">
+                        Percentual de gordura corporal: <span id="resultado_percentual">0</span> %
+                    </p>
+                    <p class="resultados">
+                        Massa Gorda: <span id="resultado_massa_gorda">0.00</span> kg
+                    </p>
+                    <p class="resultados">
+                        Massa Magra: <span id="resultado_massa_magra">0.00</span> kg
+                    </p>
+
+                    <p class="resultados">
+                        O consumo diario de proteinas deve ser de pelo menos: <span id="resultado_proteinas">0</span>g
+                    </p>
+
+                    <p class="resultados">
+                        O consumo de Kcal deve ser de pelo menos: <span id="resultado_kcal">000.0</span> kcal diario
+                    </p>
+                </div>  
+            </section>
+
+            <div class="voltar">
+                <button onclick="atualizar()">Voltar</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
